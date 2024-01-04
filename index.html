@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<style type="text/css">
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+   .container{
+        display: flex;
+        width: 80%;
+        height: 80%;
+        align-items: center;
+        
+   }
+
+
+
+
+
+
+</style>
+
+<center>
+<body style="background:url('loginbg.jpg');background-size:cover">
+<section style="display: flex; justify-content: center; align-items: center; min-height: 100vh; width: 100%;">
+    <div style="position: relative; width: 250px; height: 220px; background: transparent; border: 1px solid rgba(255,255,255,0.5); border-radius: 20px; backdrop-filter: blur(2px); display: flex; justify-content: center; align-items: center;border-color:white">
+             <center><h1>Login</h1>
+                <div class="container">
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            // Simplified check for a valid username and password
+            if (username === "kenley123@wamport.com" && password === "watosionfire") {
+                // Redirect to the home page (ken.html)
+                window.location.href = "homepage.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</div>
+</body>
+</html>
